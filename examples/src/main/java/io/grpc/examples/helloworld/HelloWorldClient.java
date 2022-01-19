@@ -84,7 +84,7 @@ public class HelloWorldClient {
     ManagedChannel channel = ManagedChannelBuilder.forTarget(target)
         // Channels are secure by default (via SSL/TLS). For the example we disable TLS to avoid
         // needing certificates.
-        .usePlaintext()
+        .usePlaintext()         // 使用非安全(ssl/tls)认证的方式
         .build();
     try {
       HelloWorldClient client = new HelloWorldClient(channel);
